@@ -45,18 +45,18 @@ import { SITE_TITLE } from "../consts";
 <style>
   header {
     margin: 0;
-    padding: 0 1em;
-    background: white;
+    padding: 0;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
   h2 {
     margin: 0;
-    font-size: 1em;
   }
 
   h2 a,
   h2 a.active {
+    font-size: 32px;
     text-decoration: none;
+    color: var(--color-text);
   }
   nav {
     display: flex;
@@ -64,22 +64,31 @@ import { SITE_TITLE } from "../consts";
     justify-content: space-between;
   }
   nav a {
-    padding: 1em 0.5em;
-    color: var(--black);
+    padding: 1em 0.25em;
+    color: var(--color-text-supporting);
     border-bottom: 4px solid transparent;
     text-decoration: none;
   }
   nav a.active {
     text-decoration: none;
-    border-bottom-color: var(--accent);
+  }
+  nav a:hover {
+    color: var(--color-text);
   }
   .social-links,
   .social-links a {
     display: flex;
   }
   @media (max-width: 720px) {
+    .nav {
+      flex-direction: column;
+    }
     .social-links {
       display: none;
+    }
+
+    h2 {
+      font-size: 1em;
     }
   }
 </style>
